@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+NAME='sudohacknight'
+GUNICORN=/opt/sudohacknight/venv/bin/gunicorn
+#PARENT_DIR=/opt/sudohacknight
+APP_DIR=/opt/sudohacknight/sudohacknight
+DJANGO_SETTINGS_MODULE=sudohacknight.settings
+DJANGO_WSGI_MODULE=sudohacknight.wsgi
+
+WORKERS=3
+USER=root
+#GROUP=root	
+SOCKET=/opt/sudohacknight/gunicorn.sock
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$APP_DIR:$PYHTONPATH
+
+
+exec $GUNICORN ${DJANGO_WSGI_MODULE}:application \
+--name $NAME \
+--workers $WORKERS \
+--user=$USER \
+--bind=unix:$SOCKET \
+--log-level=debug \
+--log-file=-
+
