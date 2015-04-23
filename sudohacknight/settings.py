@@ -168,11 +168,11 @@ DATABASES = {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         # DB name or path to database file if using sqlite3.
-        "NAME": "sudohacknightdb",
+        "NAME": os.environ["SH_DB_NAME"],
         # Not used with sqlite3.
-        "USER": "shadmin",
+        "USER": os.environ["SH_DB_USER"],
         # Not used with sqlite3.
-        "PASSWORD": "catscorpionz23",
+        "PASSWORD": os.environ["SH_DB_PASSWD"],
         # Set to empty string for localhost. Not used with sqlite3.
         "HOST": "localhost",
         # Set to empty string for default. Not used with sqlite3.
