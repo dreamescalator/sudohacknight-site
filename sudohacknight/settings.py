@@ -1,5 +1,5 @@
 from __future__ import absolute_import, unicode_literals
-
+#import os as opsys
 ######################
 # MEZZANINE SETTINGS #
 ######################
@@ -40,6 +40,7 @@ from __future__ import absolute_import, unicode_literals
 #     (1, "Top navigation bar", "pages/menus/dropdown.html"),
 #     (2, "Left-hand tree", "pages/menus/tree.html"),
 #     (3, "Footer", "pages/menus/footer.html"),
+
 # )
 
 # A sequence of fields that will be injected into Mezzanine's (or any
@@ -165,15 +166,15 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
         # DB name or path to database file if using sqlite3.
-        "NAME": "",
+        "NAME": "sudohacknightdb",
         # Not used with sqlite3.
-        "USER": "",
+        "USER": "shadmin",
         # Not used with sqlite3.
-        "PASSWORD": "",
+        "PASSWORD": "catscorpionz23",
         # Set to empty string for localhost. Not used with sqlite3.
-        "HOST": "",
+        "HOST": "localhost",
         # Set to empty string for default. Not used with sqlite3.
         "PORT": "",
     }
@@ -205,7 +206,7 @@ STATIC_URL ="/static/"
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/opt/sudohacknight/sudohacknight/static/'#os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+STATIC_ROOT = '/opt/sudohacknight-site/sudohacknight/static/'#os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 #STATICFILES_DIRS = os.path.join(PROJECT_ROOT, 'static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
@@ -224,7 +225,7 @@ ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 # or "C:/www/django/templates".
 # Always use forward slashes, even on Windows.
 # Don't forget to use absolute paths, not relative paths.
-TEMPLATE_DIRS = '/opt/sudohacknight/venv/lib/python2.7/site-packages/mezzanine/core/templates'
+TEMPLATE_DIRS = '/opt/sudohacknight-site/venv/lib/python2.7/site-packages/mezzanine/core/templates'
 
 
 ################

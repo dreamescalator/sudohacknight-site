@@ -1,16 +1,16 @@
 #!/usr/bin/bash
 
 NAME='sudohacknight'
-GUNICORN=/opt/sudohacknight/venv/bin/gunicorn
+GUNICORN=/opt/sudohacknight-site/venv/bin/gunicorn
 #PARENT_DIR=/opt/sudohacknight
-APP_DIR=/opt/sudohacknight/sudohacknight
+APP_DIR=/opt/sudohacknight-site/sudohacknight
 DJANGO_SETTINGS_MODULE=sudohacknight.settings
 DJANGO_WSGI_MODULE=sudohacknight.wsgi
 
 WORKERS=3
 USER=root
 #GROUP=root	
-SOCKET=/opt/sudohacknight/gunicorn.sock
+SOCKET=/opt/sudohacknight-site/gunicorn.sock
 export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
 export PYTHONPATH=$APP_DIR:$PYHTONPATH
 
