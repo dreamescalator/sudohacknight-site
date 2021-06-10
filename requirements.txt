@@ -1,6 +1,6 @@
 Cheetah==2.4.4
 DenyHost==2.9
-Django==1.6.11
+Django==2.2.24
 IPy==0.75
 Markdown==2.4.1
 Mezzanine==3.1.10
