@@ -25,7 +25,7 @@ iniparse==0.4
 javapackages==1.0.0
 jsonpatch==1.2
 jsonpointer==1.0
-lxml==3.2.1
+lxml==4.6.5
 meld3==1.0.2
 oauthlib==0.7.2
 policycoreutils-default-encoding==0.1
